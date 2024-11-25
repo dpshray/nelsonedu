@@ -68,7 +68,6 @@ Route::middleware(['auth', 'verified'])->group(function () {
         Route::resource('study_abroad', StudyAbroadController::class);
         Route::get('dashboard', [AdminController::class, 'index'])->name('index');
         Route::resource('teacher', TeacherController::class)->except('show');
-        Route::resource('exam', ExamController::class);
         Route::resource('classroom', ClassRoomController::class)->except(['index', 'show']);
         Route::resource('student', ExamStudentController::class)->only(['index', 'update']);
 
@@ -89,7 +88,7 @@ Route::middleware(['auth', 'verified'])->group(function () {
 
     Route::prefix('teacher')->name('teacher.')->group(function () {
         Route::get('dashboard', [TeacherDashboardController::class, 'index'])->name('index');
-        Route::resource('exam', ExamController::class)->only('index');
+        Route::resource('exam', ExamController::class);
         Route::resource('classroom', ClassRoomController::class)->only('index');
 
         Route::get('classroom/{classroom}/study_material', [StudyMaterialController::class, 'index'])->name('study_material.index');

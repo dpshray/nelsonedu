@@ -46,7 +46,7 @@
                         </div>
                     </div>
                     <div class="btn-list">
-                        <a href="{{route('admin.exam.create')}}">
+                        <a href="{{route('teacher.exam.create')}}">
                             <button class="btn btn-primary-light btn-wave me-2">
                                 <i class="bx bx-crown align-middle"></i> Add New Exam
                             </button>
@@ -88,10 +88,16 @@
                                                 <td>
                                                     <div class="hstack gap-2 flex-wrap">
                                                         @if (auth()->user()->isAdmin())
-                                                            <a href="{{ route('admin.exam.edit', $exam->id) }}" class="text-info fs-14 lh-1" data-bs-toggle="tooltip"
+                                                            <a href="{{ route('teacher.exam.edit', $exam->id) }}" class="text-info fs-14 lh-1" data-bs-toggle="tooltip"
                                                                 data-bs-placement="top" title="Edit"><i
                                                                     class="ri-edit-line"></i></a>
-                                                            <form action="{{ route('admin.exam.destroy', $exam->id) }}" method="POST">
+                                                            
+                                                            <a href="{{ route('admin.assign_teacher_exam.create', $exam->id) }}" class="text-success fs-14 lh-1" data-bs-toggle="tooltip" data-bs-placement="top" title="Assign Teacher">
+                                                                <i class="ri-restart-line"></i>
+                                                            </a>
+                                                        @endif
+                                                        @if(auth()->user()->isAdmin() || auth()->user()->exams->pluck('id')->contains($exam->id))
+                                                            <form action="{{ route('teacher.exam.destroy', $exam->id) }}" method="POST">
                                                                 @csrf
                                                                 @method('DELETE')
                                                                 <a href="javascript:;" onclick="confirmation(event)" class="text-danger fs-14 lh-1" data-bs-toggle="tooltip" data-bs-placement="top" title="Delete">
@@ -99,9 +105,6 @@
                                                                 </a>
 
                                                             </form>
-                                                            <a href="{{ route('admin.assign_teacher_exam.create', $exam->id) }}" class="text-success fs-14 lh-1" data-bs-toggle="tooltip" data-bs-placement="top" title="Assign Teacher">
-                                                                <i class="ri-restart-line"></i>
-                                                            </a>
                                                         @endif
                                                         <a href="{{ route('teacher.question.create', $exam->id) }}" class="text-success fs-14 lh-1" data-bs-toggle="tooltip" data-bs-placement="top" title="Add Questions">
                                                             <i class="bi bi-plus-square"></i>

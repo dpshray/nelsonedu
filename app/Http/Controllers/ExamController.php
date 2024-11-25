@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Http\Controllers;
 
 use App\Http\Requests\Admin\Exam\ExamStoreRequest;
@@ -12,7 +11,6 @@ class ExamController extends Controller
     public function index()
     {
         if (auth()->user()->isAdmin()) {
-
             $exams = Exam::select(['id', 'title', 'target', 'price', 'negative_marking_percent', 'status'])->latest()->paginate(10);
         } else {
             $exams = auth()->user()->exams()->latest()->paginate(10);
@@ -26,7 +24,7 @@ class ExamController extends Controller
         Gate::authorize('create', Exam::class);
 
         $this->data['title'] = 'Create';
-        $this->data['route'] = route('admin.exam.store');
+        $this->data['route'] = route('teacher.exam.store');
 
         return view('admin.exam.create', $this->data);
     }
@@ -53,18 +51,24 @@ class ExamController extends Controller
             'status' => $validated->status,
         ]);
 
-        if (! $exam) {
+        if (auth()->user()->isTeacher()) {
+            $exam->teachers()->syncWithoutDetaching([
+                'teacher_id' => auth()->id()
+            ]);
+        }
+
+        if (!$exam) {
             return $this->backWithError('Exam Addition Failed');
         }
 
-        return $this->redirectWithSuccess('admin.exam.index', 'New Exam Added Successfully.');
+        return $this->redirectWithSuccess('teacher.exam.index', 'New Exam Added Successfully.');
     }
 
     public function edit(string $id)
     {
         $this->data['title'] = 'Edit';
         $this->data['exam'] = Exam::find($id, ['id', 'title', 'target', 'price', 'description', 'negative_marking_percent', 'status']);
-        $this->data['route'] = route('admin.exam.update', ['exam' => $this->data['exam']]);
+        $this->data['route'] = route('teacher.exam.update', ['exam' => $this->data['exam']]);
 
         return view('admin.exam.create', $this->data);
     }
@@ -92,11 +96,11 @@ class ExamController extends Controller
             'status' => $validated->status,
         ]);
 
-        if (! $result) {
+        if (!$result) {
             return $this->backWithError(message: 'Exam Updation Failed');
         }
 
-        return $this->redirectWithSuccess('admin.exam.index', 'Exam Updated Successfully.');
+        return $this->redirectWithSuccess('teacher.exam.index', 'Exam Updated Successfully.');
     }
 
     public function destroy(Exam $exam)
@@ -104,11 +108,10 @@ class ExamController extends Controller
         deleteFile($exam->image);
         $deleted = $exam->delete();
 
-        if (! $deleted) {
+        if (!$deleted) {
             return $this->backWithError(message: 'Exam Deletion Failed');
         }
 
-        return $this->redirectWithSuccess('admin.exam.index', 'Exam Deleted Successfully.');
-
+        return $this->redirectWithSuccess('teacher.exam.index', 'Exam Deleted Successfully.');
     }
 }

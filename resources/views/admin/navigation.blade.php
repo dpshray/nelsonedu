@@ -73,7 +73,7 @@
                                 <a href="{{route('admin.classroom.create')}}" class="side-menu__item">Create Class</a>
                             </li>
                             <li class="slide">
-                                <a href="{{route('admin.exam.create')}}" class="side-menu__item">Create Exams</a>
+                                <a href="{{route('teacher.exam.create')}}" class="side-menu__item">Create Exams</a>
                             </li>
 
                             <li class="slide">
@@ -96,11 +96,9 @@
                         <i class="ri-arrow-down-s-line side-menu__angle"></i>
                     </a>
                     <ul class="slide-menu child1">
-                        @if(auth()->user()->isAdmin())
-                            <li class="slide">
-                                <a href="{{route('admin.exam.create')}}" class="side-menu__item">Create Exam</a>
-                            </li>
-                        @endif
+                        <li class="slide">
+                            <a href="{{route('teacher.exam.create')}}" class="side-menu__item">Create Exam</a>
+                        </li>
                         <li class="slide">
                             <a href="{{route('teacher.exam.index')}}" class="side-menu__item">List Exam</a>
                         </li>
