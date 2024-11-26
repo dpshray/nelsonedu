@@ -53,7 +53,6 @@
                     <h3>Class Meetings</h3>
                     <div class="row row-cols-1 row-cols-md-3 g-4">
                         @foreach($classroom->class_meetings as $class_meeting)
-                            @if($class_meeting->start_date_time > now())
                                 <div class="col">
                                     <div class="card">
                                         <div class="card-body">
@@ -69,7 +68,6 @@
                                         </div>
                                     </div>
                                 </div>
-                            @endif
                         @endforeach
                     </div>
                 </div>

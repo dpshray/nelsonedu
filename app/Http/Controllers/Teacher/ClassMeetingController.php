@@ -55,11 +55,13 @@ class ClassMeetingController extends Controller
     public function store(ClassRoom $classroom, ClassMeetingStoreRequest $request)
     {
         $validated = $request->validated();
-        // dd(Carbon::parse($validated['start_date_time'])->toIso8601String());
+
         $payload = [
             'topic' => $validated['topic'],
             'type' => isset($validated['recurring_meeting']) ? self::MEETING_TYPE_FIXED_RECURRING_FIXED : self::MEETING_TYPE_SCHEDULE,
-            'start_time' => Carbon::parse($validated['start_date_time'])->toIso8601String(),
+            // 'start_time' => Carbon::parse($validated['start_date_time'])->toIso8601String(),
+            'start_time' => Carbon::parse($validated['start_date_time'])->addHours(5)->addMinutes(45),  // adding 5:45 for npt time
+            'timezone' => 'NP',
             'duration' => $validated['duration'],
             'auto_recording' => 'cloud',
             'default_password' => false,
