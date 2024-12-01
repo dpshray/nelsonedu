@@ -81,7 +81,9 @@
     <div class="inner-box">
     <div class="image-box">
         <figure class="image"><a href="{{url('class/details/')}}/{{$classroom->id}}"><img src="{{ asset('storage/' . $classroom->image) }}" alt></a></figure>
+        <!--
     <span class="price">{{$classroom->enrollment_cost}}</span>
+        -->
     <div class="value">{{$classroom->target_exam}}</div>
     </div>
     <div class="content-box">
