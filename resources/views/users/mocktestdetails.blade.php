@@ -54,8 +54,10 @@ Negative Marking: <span>{{$detail->negative_marking_percent}}%</span>
 </li>
 </ul>
 <div class="course-details-price">
+    <!--
 <p class="course-details-price-text">Mock Test price</p>
 <p class="course-details-price-amount">NPR {{$detail->price}}</p>
+    -->
 <a href="{{url('/login')}}" class="theme-btn btn-style-two course-details-price-btn">Buy This Mock Test</a>
 </div>
 

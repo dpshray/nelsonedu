@@ -61,8 +61,10 @@ Start Date: <span>{{$detail->start_date}}</span>
 </li>
 </ul>
 <div class="course-details-price">
+    <!--
 <p class="course-details-price-text">Course price</p>
 <p class="course-details-price-amount">NPR {{$detail->enrollment_cost}}</p>
+    -->
 <a href="{{url('/login')}}" class="theme-btn btn-style-two course-details-price-btn">Buy This Course</a>
 </div>
 

@@ -30,7 +30,9 @@
     <div class="inner-box">
     <div class="image-box">
     <figure class="image"><a href="{{url('mock-test/details/')}}/{{$exam->id}}"><img src="{{ asset('storage/' . $exam->image) }}" alt></a></figure>
+    <!--
     <span class="price">{{$exam->price}}</span>
+    -->
     <div class="value">{{$exam->target}}</div>
     </div>
     <div class="content-box">
