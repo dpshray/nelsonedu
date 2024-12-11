@@ -64,7 +64,7 @@
                                                 <div>
                                                     @foreach($question->options as $option)
                                                         <div>
-                                                            <input type="{{ $question->type }}" name="{{ 'question_' . $question->id . '[]' }}" value="{{ $option->id }}">
+                                                            <input type="{{ $question->type }}" name="{{ 'question_' . $question->id . '[]' }}" value="{{ $option->id }}" required>
                                                             <label class="form-label"> {{ $option->option  }} </label>
                                                         </div>
                                                     @endforeach

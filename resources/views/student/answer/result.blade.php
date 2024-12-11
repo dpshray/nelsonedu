@@ -55,7 +55,7 @@
                     $answers = collect($answers);
                     $obtainedMarks = $answers->pluck('answer_marks_per_question')->sum();
                     $fullMarks = $answers->pluck('question_marks')->sum();
-                    $percentage = ($obtainedMarks / $fullMarks) * 100;
+                    $percentage = round(($obtainedMarks / $fullMarks) * 100,2);
                 @endphp
                 <h4>Result Marks: {{ $obtainedMarks }}</h4>
                 <h4>Percentage: {{ $percentage }} %</h4>
@@ -65,43 +65,37 @@
                         <div class="card custom-card">
                             <div class="card-body">
                                 <div class="table-responsive">
-                                    <table class="table text-nowrap table-bordered mb-3">
-                                        <thead>
-                                            <tr>
-                                                <th scope="col">Question</th>
-                                                <th scope="col">Correct Answer</th>
-                                                <th scope="col">Your Answer</th>
-                                                <th scope="col">Result</th>
-                                                <th scope="col">Marks</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            @foreach($answers as $answer)
-                                                    <tr>
-                                                        <th scope="row">
-                                                            <div class="d-flex align-items-center">
-                                                                {{ $answer->question }}
-                                                            </div>
-                                                        </th>
-                                                        <td>{{ $answer->correct }}</td>
-                                                        <td>{{ $answer->options }}</td>
-                                                        <td>
-                                                            @php
-                                                                $userAnswer = explode(',', $answer->is_correct);
-                                                            @endphp
-                                                            @foreach($userAnswer as $ans)
-                                                                {{ $ans == 1 ? 'Correct' : 'Incorrect' }} ,
-                                                            @endforeach
-                                                        </td>
-                                                        <td>{{ $answer->marks }}</td>
-                                                   
-                                                    </tr>
-
-                                            @endforeach
-
-                                        </tbody>
-                                    </table>
-
+                                    
+                                    @foreach($answers as $answer)
+                                        <div class="mb-3 border border-success p-2">
+                                            <label class="form-label">{{ $answer->question }}</label>
+                                            <div class="ms-4">
+                                                <div class="d-flex">
+                                                    <label>Correct Answer: </label>
+                                                    <p class="ms-1">{{ $answer->correct }}</p>
+                                                </div>
+                                                <div class="d-flex">
+                                                    <label>Your Answer: </label>
+                                                    <p class="ms-1">{{ $answer->options }}</p>
+                                                </div>
+                                                <div class="d-flex">
+                                                    <label>Result: </label>
+                                                    <p class="ms-1">
+                                                        @php
+                                                            $userAnswer = explode(',', $answer->is_correct);
+                                                        @endphp
+                                                        @foreach($userAnswer as $ans)
+                                                            {{ $ans == 1 ? 'Correct' : 'Incorrect' }} ,
+                                                        @endforeach
+                                                    </p>
+                                                </div>
+                                                <div class="d-flex">
+                                                    <label>Marks: </label>
+                                                    <p class="ms-1">{{ $answer->marks }}</p>
+                                                </div>
+                                            </div>
+                                        </div> 
+                                    @endforeach
 
                                 </div>
                             </div>
