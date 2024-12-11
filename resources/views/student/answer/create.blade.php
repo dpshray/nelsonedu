@@ -60,11 +60,11 @@
                                     <div class="row gy-4">
                                         @foreach ($questions as $index => $question)
                                             <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
-                                                <label for="type" class="form-label"> {{ $question->question }} </label>
+                                                <label for="type" class="form-label">{{$index + 1}}. {{ $question->question }} </label>
                                                 <div>
                                                     @foreach($question->options as $option)
                                                         <div>
-                                                            <input type="{{ $question->type }}" name="{{ 'question_' . $question->id . '[]' }}" value="{{ $option->id }}" required>
+                                                            <input type="{{ $question->type }}" name="{{ 'question_' . $question->id . '[]' }}" value="{{ $option->id }}" {{ $question->type == 'radio' ? 'required' : '' }} >
                                                             <label class="form-label"> {{ $option->option  }} </label>
                                                         </div>
                                                     @endforeach
