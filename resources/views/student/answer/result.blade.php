@@ -65,7 +65,6 @@
                         <div class="card custom-card">
                             <div class="card-body">
                                 <div class="table-responsive">
-                                    
                                     @foreach($answers as $answer)
                                         <div class="mb-3 border border-success p-2">
                                             <label class="form-label">{{ $answer->question }}</label>
@@ -88,6 +87,10 @@
                                                             {{ $ans == 1 ? 'Correct' : 'Incorrect' }} ,
                                                         @endforeach
                                                     </p>
+                                                </div>
+                                                <div class="d-flex">
+                                                    <label>Explanation: </label>
+                                                    <p class="ms-1">{{ $answer->explanation }}</p>
                                                 </div>
                                                 <div class="d-flex">
                                                     <label>Marks: </label>
