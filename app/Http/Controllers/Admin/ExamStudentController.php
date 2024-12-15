@@ -55,6 +55,7 @@ class ExamStudentController extends Controller
                 questions ON exams.id = questions.exam_id 
             INNER JOIN 
                 answers ON questions.id = answers.question_id 
+                AND answers.user_id = es.student_id
             WHERE 
                 es.exam_id = :examId
                 AND es.exam_finished = 1

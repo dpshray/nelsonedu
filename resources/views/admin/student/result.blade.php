@@ -80,7 +80,7 @@
 
                                                 <td>{{ $estudent->full_marks }}</td>
                                                 <td>{{ $estudent->marks }}</td>
-                                                <td>{{ ($estudent->marks / $estudent->full_marks) * 100 }} %</td>
+                                                <td>{{ round(($estudent->marks / $estudent->full_marks) * 100, 2) }} %</td>
 
                                             </tr>
                                             @endforeach

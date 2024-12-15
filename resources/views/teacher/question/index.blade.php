@@ -79,14 +79,12 @@
                                             <tr>
                                                 <td scope="row">
                                                     <div class="d-flex align-items-center">
-                                                      
-                                                        {{ $question->question }}
+                                                        {{ substr($question->question , 0,  100) }}...
                                                     </div>
                                                 </td>
                                                 <td scope="row">
                                                     <div class="d-flex align-items-center">
-                                                      
-                                                        {{ $question->explanation }}
+                                                        {{ substr($question->explanation , 0,  50) }}...
                                                     </div>
                                                 </td>
                                                 <td scope="row">
