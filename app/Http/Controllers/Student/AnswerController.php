@@ -49,6 +49,7 @@ class AnswerController extends Controller
                         'option_id' => $answerId,
                         'is_correct' => $option->correct_answer,
                         'marks' => $marks,
+                        'exam_id' => $exam->id
                     ]);
                 }
             }
