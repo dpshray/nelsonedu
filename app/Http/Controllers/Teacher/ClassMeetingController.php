@@ -90,7 +90,7 @@ class ClassMeetingController extends Controller
 
         $meeting = ClassMeeting::create([
             'class_room_id' => $classroom->id,
-            'meeting_id' => $data['id'],
+            'meeting_id' => "{$data['id']}",
             'host_id' => $data['host_id'],
             'host_email' => $data['host_email'],
             // 'alternative_hosts' => $data['settings']['alternative_hosts'],
