@@ -8,6 +8,7 @@ use App\Models\ClassMeeting;
 use App\Models\ClassRoom;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\Http;
+use Illuminate\Support\Facades\Log;
 
 class ClassMeetingController extends Controller
 {
@@ -153,8 +154,26 @@ class ClassMeetingController extends Controller
         $this->data['classroom'] = $classroom;
         $this->data['classMeeting'] = $classMeeting;
         $this->data['route'] = '';
-
+        $this->data['updatedStartUrl'] = $this->getMeetingDetails($classMeeting->meeting_id);
+        
         return view('teacher.class_meeting.create', $this->data);
+    }
+
+    public function getMeetingDetails($meetingId)
+    {
+        try {
+            $response = Http::withHeaders([
+                'Authorization' => 'Bearer '.self::generateToken(),
+                'Content-Type' => 'application/json',
+            ])->get('https://api.zoom.us/v2/meetings/'.$meetingId);
+
+            $classMeeting = json_decode($response->body(), true);
+
+            return $classMeeting['start_url'];
+        } catch (\Throwable $th) {
+            Log::error('Failed to get meeting details of Id: ' . $meetingId);
+            return '';
+        }
     }
 
     public function edit(ClassRoom $classroom, ClassMeeting $classMeeting)

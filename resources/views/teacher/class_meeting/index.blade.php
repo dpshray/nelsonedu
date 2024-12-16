@@ -110,9 +110,9 @@
                                                         <a href="{{ route('teacher.class_meeting.show', [$classroom->id, $meeting->id]) }}" class="text-info fs-14 lh-1" data-bs-toggle="tooltip" data-bs-placement="top" title="View">
                                                             <i class="ri-eye-line"></i>
                                                         </a>
-                                                        <a href="{{ $meeting->start_url }}" class="text-info fs-14 lh-1" target="__blank" data-bs-toggle="tooltip" data-bs-placement="top" title="Start Meeting">
+                                                        <!-- <a href="{{ $meeting->start_url }}" class="text-info fs-14 lh-1" target="__blank" data-bs-toggle="tooltip" data-bs-placement="top" title="Start Meeting">
                                                             <i class="ti ti-arrows-shuffle-2"></i>
-                                                        </a>
+                                                        </a> -->
                                                         @if (auth()->user()->isAdmin())
                                                             <a href="{{ route('teacher.class_meeting.edit', [$classroom->id, $meeting->id]) }}" class="text-info fs-14 lh-1" data-bs-toggle="tooltip" data-bs-placement="top" title="Edit">
                                                                 <i class="ri-edit-line"></i>

@@ -154,10 +154,18 @@
                                 </form>
 
                                 @if($title == 'Show')
+                                <div class="row gy-4">
+
                                     <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
                                         <label for="topic" class="form-label"> Start URL</label>
-                                        <textarea class="form-control" rows="10" cols="10"> {{ $classMeeting->start_url }} </textarea>
+                                        <textarea class="form-control" rows="10" cols="10"> {{ $updatedStartUrl }} </textarea>
                                     </div>
+
+                                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                                        <a class="btn btn-primary" style="margin-top: 100px" href="{{ $updatedStartUrl }}" target="__blank">Click here to start meeting</a>
+                                    </div>
+                                </div>
+                                    
 
                                     <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 mt-5">
                                         <label for="topic" class="form-label"> Join URL</label>
