@@ -46,7 +46,7 @@ class ExamStudentController extends Controller
             SELECT 
                 es.student_id, 
                 SUM(answers.marks) AS marks,
-                questions.marks AS marks_per_questions
+                MAX(questions.marks) AS marks_per_questions
             FROM 
                 exam_student AS es
             INNER JOIN 
@@ -65,7 +65,7 @@ class ExamStudentController extends Controller
         INNER JOIN 
             users ON users.id = student_marks.student_id 
         GROUP BY 
-            student_id
+            student_id, users.name, users.email
         ')->getValue(DB::getQueryGrammar()), [
             'examId' => $exam->id,
         ]);

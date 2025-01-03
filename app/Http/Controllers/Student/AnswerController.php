@@ -72,13 +72,13 @@ class AnswerController extends Controller
             answers.user_id, 
             answers.question_id,
             GROUP_CONCAT(answers.marks) AS marks,
-            questions.marks as question_marks, 
+            MAX(questions.marks) as question_marks, 
             sum(answers.marks) as answer_marks_per_question,   
-            questions.question,
-            questions.explanation,
+            MAX(questions.question) as question,
+            MAX(questions.explanation) as explanation,
             GROUP_CONCAT(options.option) AS options, 
             GROUP_CONCAT(is_correct) AS is_correct, 
-            correct_answer.correct
+            MAX(correct_answer.correct) as correct
         FROM 
             answers 
         INNER JOIN 
