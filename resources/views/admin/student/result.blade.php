@@ -47,7 +47,10 @@
                     </div>
                 </div>
                 <!-- Page Header Close -->
-                <h3>Exam: {{ $exam->title }}</h3>
+                 <div class="d-flex justify-content-between align-items-center">
+                     <h3>Exam: {{ $exam->title }}</h3>
+                     <a href="{{ route('admin.download-result', $exam->id) }}" class="btn btn-primary">Export Result</a>
+                 </div>
                 <!-- Start::row-1 -->
                 <div class="row">
                     <div class="col-xl-12">

@@ -3,6 +3,7 @@
 use App\Http\Controllers\Admin\AssignTeacherController;
 use App\Http\Controllers\Admin\ClassRoomController;
 use App\Http\Controllers\Admin\ClassRoomStudentController;
+use App\Http\Controllers\Admin\ExamReportController;
 use App\Http\Controllers\Admin\ExamStudentController;
 use App\Http\Controllers\Admin\NewsController;
 use App\Http\Controllers\Admin\StudyAbroadController;
@@ -82,6 +83,8 @@ Route::middleware(['auth', 'verified'])->group(function () {
 
         Route::get('recording', [ClassMeetingController::class, 'getMeetingRecording']);
         Route::get('participants', [ClassMeetingController::class, 'getMeetingParticipants']);
+
+        Route::get('/export-exam-report/{exam}', [ExamReportController::class, 'download'])->name('download-result');
     });
 
     Route::prefix('teacher')->name('teacher.')->group(function () {
