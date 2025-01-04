@@ -4,8 +4,6 @@
 @include('admin.head')
 
 <body>
-
-
     <!-- LOADER -->
     <div id="loader">
         <img src="{{asset('admin-assets/build/assets/images/media/loader.svg')}}" alt="">
@@ -57,6 +55,7 @@
                     $fullMarks = $answers->pluck('question_marks')->sum();
                     $percentage = round(($obtainedMarks / $fullMarks) * 100,2);
                 @endphp
+                <h4>Full Marks: {{ $fullMarks }}</h4>
                 <h4>Result Marks: {{ $obtainedMarks }}</h4>
                 <h4>Percentage: {{ $percentage }} %</h4>
 
@@ -68,14 +67,44 @@
                                     @foreach($answers as $index => $answer)
                                         <div class="mb-3 border border-success p-2">
                                             <label class="form-label">{{$index + 1}}. {{ $answer->question }}</label>
-                                            <div class="ms-4">
-                                                <div class="d-flex">
-                                                    <label>Correct Answer: </label>
-                                                    <p class="ms-1">{{ $answer->correct }}</p>
+                                            @if (!empty($answer->question_image))
+                                                <div style="margin-left: 5rem">
+                                                    <img src="{{ asset($answer->question_image) }}" alt="Image" width="300" height="200">
                                                 </div>
-                                                <div class="d-flex">
-                                                    <label>Your Answer: </label>
-                                                    <p class="ms-1">{{ $answer->options }}</p>
+                                            @endif
+
+                                            <div class="ms-4">
+                                                <div>
+                                                    <div class="d-flex">
+                                                        <label>Correct Answer: </label>
+                                                        <p class="ms-1">{{ $answer->correct }}</p>
+                                                    </div>
+                                                    @if (!empty($answer->correct_image))
+                                                        <div style="margin-left: 5rem">
+                                                            @php
+                                                                $correctImages = explode(',', $answer->correct_image);
+                                                            @endphp
+                                                            @foreach($correctImages as $correctImage)
+                                                                <img src="{{ asset($correctImage) }}" alt="Image" width="300" height="200">
+                                                            @endforeach
+                                                        </div>
+                                                    @endif
+                                                </div>
+                                                <div>
+                                                    <div class="d-flex">
+                                                        <label>Your Answer: </label>
+                                                        <p class="ms-1">{{ $answer->options }}</p>
+                                                    </div>
+                                                    @if (!empty($answer->option_images))
+                                                        <div style="margin-left: 5rem">
+                                                            @php
+                                                                $optionImages = explode(',', $answer->option_images);
+                                                            @endphp
+                                                            @foreach($optionImages as $optionImage)
+                                                                <img src="{{ asset($optionImage) }}" alt="Image" width="300" height="200">
+                                                            @endforeach
+                                                        </div>
+                                                    @endif
                                                 </div>
                                                 <div class="d-flex">
                                                     <label>Result: </label>

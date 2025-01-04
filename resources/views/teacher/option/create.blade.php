@@ -104,6 +104,7 @@
                                                     <tr>
                                                         <th scope="col">Option</th>
                                                         <th scope="col">Correct Answer</th>
+                                                        <th scope="col">Option Image</th>
                                                         <th scope="col">Action</th>
                                                     </tr>
                                                 </thead>
@@ -118,6 +119,11 @@
                                                         </th>
                                                         <td>
                                                             <span class="badge bg-light text-dark">{{ $option->correct_answer ? 'Yes' : 'No' }}</span>
+                                                        </td>
+                                                        <td>
+                                                            @if (!empty($option->image))
+                                                                <img src="{{ asset($option->image) }}" alt="Image" width="100" height="50">
+                                                            @endif
                                                         </td>
                                                         <td>
                                                             <div class="hstack gap-2 flex-wrap">

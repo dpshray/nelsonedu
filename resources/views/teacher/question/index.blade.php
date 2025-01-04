@@ -68,7 +68,9 @@
                                         <thead>
                                             <tr>
                                                 <th scope="col">Question</th>
+                                                <th scope="col">Question Image</th>
                                                 <th scope="col">Explanation</th>
+                                                <th scope="col">Explanation Image</th>
                                                 <th scope="col">Question Type</th>
                                                 <th scope="col">Marks</th>
                                                 <th scope="col">Action</th>
@@ -84,7 +86,22 @@
                                                 </td>
                                                 <td scope="row">
                                                     <div class="d-flex align-items-center">
+                                                        @if (!empty($question->question_image))
+                                                            <img src="{{ asset($question->question_image) }}" alt="Image" width="80" height="80">
+                                                        @endif
+                                                    </div>
+                                                </td>
+                                                <td scope="row">
+                                                    <div class="d-flex align-items-center">
                                                         {{ substr($question->explanation , 0,  50) }}...
+                                                    </div>
+                                                </td>
+                                                <td scope="row">
+                                                    <div class="d-flex align-items-center">
+                                                        @if (!empty($question->explanation_image))
+                                                            <img src="{{ asset($question->explanation_image) }}" alt="Image" width="80" height="80">
+                                                        @endif
+
                                                     </div>
                                                 </td>
                                                 <td scope="row">

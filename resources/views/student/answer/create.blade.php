@@ -60,12 +60,23 @@
                                     <div class="row gy-4">
                                         @foreach ($questions as $index => $question)
                                             <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
-                                                <label for="type" class="form-label">{{$index + 1}}. {{ $question->question }} </label>
+                                                <label for="type" class="form-label fw-bold">{{$index + 1}}. {{ $question->question }} </label>
+                                                @if(!empty($question->question_image))
+                                                    <div style="margin-left: 5rem">
+                                                        <img src="{{ asset($question->question_image) }}" alt="Image" width="600" height="300">
+                                                    </div>
+                                                @endif
                                                 <div>
                                                     @foreach($question->options as $option)
                                                         <div>
                                                             <input type="{{ $question->type }}" name="{{ 'question_' . $question->id . '[]' }}" value="{{ $option->id }}" {{ $question->type == 'radio' ? 'required' : '' }} >
                                                             <label class="form-label"> {{ $option->option  }} </label>
+                                                            @if(!empty($option->image))
+                                                                <div style="margin-left: 5rem">
+                                                                    <img src="{{ asset($option->image) }}" alt="Image" width="600" height="300">
+                                                                </div>
+                                                            @endif
+
                                                         </div>
                                                     @endforeach
 

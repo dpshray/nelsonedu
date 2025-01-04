@@ -75,10 +75,14 @@ class AnswerController extends Controller
             MAX(questions.marks) as question_marks, 
             sum(answers.marks) as answer_marks_per_question,   
             MAX(questions.question) as question,
+            MAX(questions.question_image) as question_image,
             MAX(questions.explanation) as explanation,
-            GROUP_CONCAT(options.option) AS options, 
+            MAX(questions.explanation_image) as explanation_image,
+            GROUP_CONCAT(options.option) AS options,
+            GROUP_CONCAT(options.image) AS option_images,
             GROUP_CONCAT(is_correct) AS is_correct, 
-            MAX(correct_answer.correct) as correct
+            MAX(correct_answer.correct) as correct,
+            MAX(correct_answer.correct_image) as correct_image
         FROM 
             answers 
         INNER JOIN 
@@ -86,7 +90,8 @@ class AnswerController extends Controller
         INNER JOIN 
             (SELECT 
                 question_id, 
-                GROUP_CONCAT(options.option) AS correct 
+                GROUP_CONCAT(options.option) AS correct,
+                GROUP_CONCAT(options.image) AS correct_image
             FROM 
                 options 
             WHERE 
