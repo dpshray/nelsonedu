@@ -84,7 +84,6 @@ Route::middleware(['auth', 'verified'])->group(function () {
         Route::get('recording', [ClassMeetingController::class, 'getMeetingRecording']);
         Route::get('participants', [ClassMeetingController::class, 'getMeetingParticipants']);
 
-        Route::get('/export-exam-report/{exam}', [ExamReportController::class, 'download'])->name('download-result');
     });
 
     Route::prefix('teacher')->name('teacher.')->group(function () {
@@ -133,6 +132,8 @@ Route::middleware(['auth', 'verified'])->group(function () {
         Route::delete('question/{question}/option/{option}', [OptionController::class, 'destroy'])->name('option.destroy');
 
         Route::get('exam/{exam}/student/result', [ExamStudentController::class, 'result'])->name('student.result');
+
+        Route::get('/export-exam-report/{exam}', [ExamReportController::class, 'download'])->name('download-result');
     });
 
     Route::prefix('student')->controller(StudentDashboardController::class)->name('student.')->group(function () {
