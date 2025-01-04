@@ -5,8 +5,8 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Models\Exam;
 use App\Models\ExamStudent;
-use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class ExamStudentController extends Controller
 {
@@ -28,7 +28,7 @@ class ExamStudentController extends Controller
         $examStudent->update([
             'status' => 1,
             'payment_status' => $validatedData['payment_status'],
-            'remarks' => $validatedData['remarks']
+            'remarks' => $validatedData['remarks'],
         ]);
 
         return $this->redirectWithSuccess('admin.student.index', 'Enrollment approved Successfully.');

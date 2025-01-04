@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+
 use App\Models\ClassRoom;
 use App\Models\Exam;
 use App\Models\News;
@@ -12,36 +13,42 @@ class HomeController extends Controller
     {
         $classroom = ClassRoom::orderBy('created_at', 'desc')->get();
         $news = News::latest()->take(3)->get();
+
         return view('users.home', compact('classroom', 'news'));
     }
 
     public function about()
     {
         $classroom = ClassRoom::orderBy('created_at', 'desc')->get();
+
         return view('users.about', compact('classroom'));
     }
 
     public function classes()
     {
         $classroom = ClassRoom::orderBy('created_at', 'desc')->get();
+
         return view('users.classes', compact('classroom'));
     }
 
     public function classdetails($id)
     {
         $detail = ClassRoom::find($id);
+
         return view('users.classdetails', compact('detail'));
     }
 
     public function mocktest()
     {
         $exam = Exam::orderBy('created_at', 'desc')->get();
+
         return view('users.mocktests', compact('exam'));
     }
 
     public function mocktestdetails($id)
     {
         $detail = Exam::find($id);
+
         return view('users.mocktestdetails', compact('detail'));
     }
 
@@ -73,6 +80,7 @@ class HomeController extends Controller
     public function notice()
     {
         $news = News::orderBy('created_at', 'desc')->get();
+
         return view('users.shownotice', compact('news'));
     }
 
@@ -80,12 +88,14 @@ class HomeController extends Controller
     {
         $detail = News::find($id);
         $news = News::orderBy('created_at', 'desc')->limit(5)->get();
+
         return view('users.noticedetails', compact('detail', 'news'));
     }
 
     public function studyabroad()
     {
         $abroad = StudyAbroad::orderBy('created_at', 'desc')->get();
+
         return view('users.showabroad', compact('abroad'));
     }
 
@@ -93,6 +103,7 @@ class HomeController extends Controller
     {
         $detail = StudyAbroad::find($id);
         $abroad = StudyAbroad::orderBy('created_at', 'desc')->limit(5)->get();
+
         return view('users.abroaddetails', compact('detail', 'abroad'));
     }
 }

@@ -7,7 +7,6 @@ use App\Http\Requests\Teacher\StudyMaterial\StudyMaterialStoreRequest;
 use App\Models\ClassRoom;
 use App\Models\LectureVideo;
 use App\Models\StudyMaterial;
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Storage;
@@ -31,12 +30,11 @@ class StudyMaterialController extends Controller
         //         return explode('.', $fullname)[0];
         //     });
 
-
         // return view('teacher.study_material.index', $this->data);
 
         $this->data['lectureVideos'] = LectureVideo::with('study_materials')->select(['id', 'link'])->where('class_room_id', $classroom->id)->latest()->paginate(10);
         $this->data['classroom'] = $classroom;
-        
+
         return view('teacher.study_material.index', $this->data);
     }
 
@@ -68,14 +66,13 @@ class StudyMaterialController extends Controller
         DB::beginTransaction();
 
         try {
-            
+
             $lectureVideo = LectureVideo::create([
                 'class_room_id' => $classroomId,
                 'link' => $validated->video_link,
                 'created_by' => auth()->id(),
                 'updated_by' => auth()->id(),
             ]);
-
 
             $data = [];
             foreach ($filesPath as $filePath) {
@@ -94,7 +91,7 @@ class StudyMaterialController extends Controller
             DB::commit();
 
         } catch (\Exception $e) {
-            Log::error('Study Material insertion failed: ' . $e->getMessage());
+            Log::error('Study Material insertion failed: '.$e->getMessage());
 
             throw $e;
         }
@@ -126,7 +123,7 @@ class StudyMaterialController extends Controller
         if ($request->hasFile('file')) {
             $lectureVideo->study_materials->each(function ($studyMaterial) {
                 deleteFile($studyMaterial->file, disk: 'public');
-    
+
                 $studyMaterial->delete();
             });
 
@@ -162,15 +159,14 @@ class StudyMaterialController extends Controller
             }
 
             $result = StudyMaterial::insert($data);
-            
+
             DB::commit();
 
         } catch (\Exception $e) {
-            Log::error('Study Material insertion failed: ' . $e->getMessage());
+            Log::error('Study Material insertion failed: '.$e->getMessage());
 
             throw $e;
         }
-
 
         if (! $result) {
             return $this->backWithError('Study Material Updation Failed');

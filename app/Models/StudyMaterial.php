@@ -19,7 +19,7 @@ class StudyMaterial extends Model
     }
 
     public function lectureVideo()
-{
-    return $this->belongsTo(LectureVideo::class);
-}
+    {
+        return $this->belongsTo(LectureVideo::class);
+    }
 }

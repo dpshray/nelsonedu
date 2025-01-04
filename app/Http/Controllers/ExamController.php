@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Http\Controllers;
 
 use App\Http\Requests\Admin\Exam\ExamStoreRequest;
@@ -53,11 +54,11 @@ class ExamController extends Controller
 
         if (auth()->user()->isTeacher()) {
             $exam->teachers()->syncWithoutDetaching([
-                'teacher_id' => auth()->id()
+                'teacher_id' => auth()->id(),
             ]);
         }
 
-        if (!$exam) {
+        if (! $exam) {
             return $this->backWithError('Exam Addition Failed');
         }
 
@@ -96,7 +97,7 @@ class ExamController extends Controller
             'status' => $validated->status,
         ]);
 
-        if (!$result) {
+        if (! $result) {
             return $this->backWithError(message: 'Exam Updation Failed');
         }
 
@@ -108,7 +109,7 @@ class ExamController extends Controller
         deleteFile($exam->image);
         $deleted = $exam->delete();
 
-        if (!$deleted) {
+        if (! $deleted) {
             return $this->backWithError(message: 'Exam Deletion Failed');
         }
 

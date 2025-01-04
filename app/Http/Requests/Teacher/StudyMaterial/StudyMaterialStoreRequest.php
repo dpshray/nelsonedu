@@ -25,7 +25,7 @@ class StudyMaterialStoreRequest extends FormRequest
         return [
             'file' => ['sometimes', 'nullable', 'array', 'min:1'],
             'file.*' => ['sometimes', 'nullable', File::types(['pdf', 'txt'])->max(10 * 1024)],
-            'video_link' => ['sometimes', 'nullable', 'string']
+            'video_link' => ['sometimes', 'nullable', 'string'],
         ];
     }
 }

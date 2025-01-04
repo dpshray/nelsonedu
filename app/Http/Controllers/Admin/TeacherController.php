@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Http\Controllers\Admin;
 
 use App\Constants\Constants;
@@ -40,7 +41,7 @@ class TeacherController extends Controller
 
         event(new Registered($user));
 
-        if (!$user) {
+        if (! $user) {
             return $this->backWithError('Teacher Addition Failed');
         }
 
@@ -66,7 +67,7 @@ class TeacherController extends Controller
             'password' => Hash::make($validated->password),
         ]);
 
-        if (!$result) {
+        if (! $result) {
             return $this->backWithError(message: 'Teacher Updation Failed');
         }
 
@@ -77,7 +78,7 @@ class TeacherController extends Controller
     {
         $deleted = $teacher->delete();
 
-        if (!$deleted) {
+        if (! $deleted) {
             return $this->backWithError(message: 'Teacher Deletion Failed');
         }
 

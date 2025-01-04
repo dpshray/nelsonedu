@@ -11,7 +11,6 @@ class LectureVideo extends Model
 
     protected $guarded = [];
 
-
     public function study_materials()
     {
         return $this->hasMany(StudyMaterial::class);

@@ -44,8 +44,6 @@ Route::get('notice/details/{id}', [HomeController::class, 'noticedetails']);
 Route::get('study-abroad', [HomeController::class, 'studyabroad']);
 Route::get('abroad/details/{id}', [HomeController::class, 'abroaddetails']);
 
-
-
 // Routes for Templates
 Route::get('admin/add-questions-exam/{id}', [HomeController::class, 'addquestionsexam']);
 Route::get('admin/showquestions/{id}', [HomeController::class, 'showquestionsexam']);

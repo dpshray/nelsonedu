@@ -155,7 +155,7 @@ class ClassMeetingController extends Controller
         $this->data['classMeeting'] = $classMeeting;
         $this->data['route'] = '';
         $this->data['updatedStartUrl'] = $this->getMeetingDetails($classMeeting->meeting_id);
-        
+
         return view('teacher.class_meeting.create', $this->data);
     }
 
@@ -171,7 +171,8 @@ class ClassMeetingController extends Controller
 
             return $classMeeting['start_url'];
         } catch (\Throwable $th) {
-            Log::error('Failed to get meeting details of Id: ' . $meetingId);
+            Log::error('Failed to get meeting details of Id: '.$meetingId);
+
             return '';
         }
     }

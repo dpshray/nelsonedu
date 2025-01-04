@@ -26,7 +26,7 @@ class ClassRoomStudentController extends Controller
         $classroomStudent->update([
             'status' => 1,
             'payment_status' => $validatedData['payment_status'],
-            'remarks' => $validatedData['remarks']
+            'remarks' => $validatedData['remarks'],
         ]);
 
         return $this->redirectWithSuccess('admin.classroom.student.index', 'Enrollment approved Successfully.');
