@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Answer;
 use App\Models\Exam;
 use App\Models\ExamStudent;
+use App\Models\Marksheet;
 use App\Models\Option;
 use App\Models\Question;
 use Exception;
@@ -59,16 +60,41 @@ class AnswerController extends Controller
                 'updated_at' => now(),
             ]);
 
+            $this->createMarksheet($exam);
+
             return $this->redirectWithSuccess('student.exam.myexam', 'Answers Submitted Successfully.');
         } catch (Exception $e) {
             return $this->backWithError('Answer Submission Failed. Please Report to Admin');
         }
     }
 
+    private function createMarksheet($exam)
+    {
+        $result = collect($this->getResult($exam));
+        $fullMarks = $result->pluck('question_marks')->sum();
+        $obtainedMarks = $result->pluck('answer_marks_per_question')->sum();
+        $percentage = round(($obtainedMarks / $fullMarks) * 100,2);
+
+        Marksheet::create([
+            'student_id' => auth()->id(),
+            'exam_id' => $exam->id,
+            'full_marks' => $fullMarks,
+            'obtained_marks' => $obtainedMarks,
+            'percentage' => $percentage,
+        ]);
+    }
+
     public function result(Exam $exam)
     {
         // $answers = Answer::with(['question', 'question.options', 'option'])->where('user_id', auth()->id())->whereIn('question_id', $exam->questions->pluck('id')->toArray())->get();
-        $answers = DB::select(DB::raw('SELECT 
+        $answers = $this->getResult($exam);
+
+        return view('student.answer.result', compact('answers', 'exam'));
+    }
+
+    private function getResult($exam)
+    {
+        $result = DB::select(DB::raw('SELECT 
             answers.user_id, 
             answers.question_id,
             GROUP_CONCAT(answers.marks) AS marks,
@@ -109,7 +135,7 @@ class AnswerController extends Controller
             'examId' => $exam->id,
         ]);
 
-        return view('student.answer.result', compact('answers', 'exam'));
+        return $result;
     }
 
     public function edit(Answer $answer)
