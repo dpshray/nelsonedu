@@ -69,7 +69,7 @@
                                             <label class="form-label">{{$index + 1}}. {{ $answer->question }}</label>
                                             @if (!empty($answer->question_image))
                                                 <div style="margin-left: 5rem">
-                                                    <img src="{{ asset($answer->question_image) }}" alt="Image" width="300" height="200">
+                                                    <img src="{{ asset('storage/' . $answer->question_image) }}" alt="Image" width="300" height="200">
                                                 </div>
                                             @endif
 
@@ -85,7 +85,7 @@
                                                                 $correctImages = explode(',', $answer->correct_image);
                                                             @endphp
                                                             @foreach($correctImages as $correctImage)
-                                                                <img src="{{ asset($correctImage) }}" alt="Image" width="300" height="200">
+                                                                <img src="{{ asset('storage/' . $correctImage) }}" alt="Image" width="300" height="200">
                                                             @endforeach
                                                         </div>
                                                     @endif
@@ -101,7 +101,7 @@
                                                                 $optionImages = explode(',', $answer->option_images);
                                                             @endphp
                                                             @foreach($optionImages as $optionImage)
-                                                                <img src="{{ asset($optionImage) }}" alt="Image" width="300" height="200">
+                                                                <img src="{{ asset('storage/' . $optionImage) }}" alt="Image" width="300" height="200">
                                                             @endforeach
                                                         </div>
                                                     @endif

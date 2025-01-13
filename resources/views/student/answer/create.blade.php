@@ -63,7 +63,7 @@
                                                 <label for="type" class="form-label fw-bold">{{$index + 1}}. {{ $question->question }} </label>
                                                 @if(!empty($question->question_image))
                                                     <div style="margin-left: 5rem">
-                                                        <img src="{{ asset($question->question_image) }}" alt="Image" width="600" height="300">
+                                                        <img src="{{ asset('storage/' . $question->question_image) }}" alt="Image" width="600" height="300">
                                                     </div>
                                                 @endif
                                                 <div>
@@ -73,7 +73,7 @@
                                                             <label class="form-label"> {{ $option->option  }} </label>
                                                             @if(!empty($option->image))
                                                                 <div style="margin-left: 5rem">
-                                                                    <img src="{{ asset($option->image) }}" alt="Image" width="600" height="300">
+                                                                    <img src="{{ asset('storage/' . $option->image) }}" alt="Image" width="600" height="300">
                                                                 </div>
                                                             @endif
 

@@ -122,7 +122,7 @@
                                                         </td>
                                                         <td>
                                                             @if (!empty($option->image))
-                                                                <img src="{{ asset($option->image) }}" alt="Image" width="100" height="50">
+                                                                <img src="{{ asset('storage/' . $option->image) }}" alt="Image" width="100" height="50">
                                                             @endif
                                                         </td>
                                                         <td>

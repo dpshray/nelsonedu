@@ -87,7 +87,7 @@
                                                 <td scope="row">
                                                     <div class="d-flex align-items-center">
                                                         @if (!empty($question->question_image))
-                                                            <img src="{{ asset($question->question_image) }}" alt="Image" width="80" height="80">
+                                                            <img src="{{ asset('storage/' . $question->question_image) }}" alt="Image" width="80" height="80">
                                                         @endif
                                                     </div>
                                                 </td>
@@ -99,7 +99,7 @@
                                                 <td scope="row">
                                                     <div class="d-flex align-items-center">
                                                         @if (!empty($question->explanation_image))
-                                                            <img src="{{ asset($question->explanation_image) }}" alt="Image" width="80" height="80">
+                                                            <img src="{{ asset('storage/' . $question->explanation_image) }}" alt="Image" width="80" height="80">
                                                         @endif
 
                                                     </div>
