@@ -13,7 +13,7 @@ class QuestionController extends Controller
 {
     public function index(Exam $exam)
     {
-        $questions = Question::select(['id', 'question', 'question_image', 'explanation', 'explanation_image', 'type', 'marks'])->where('exam_id', $exam->id)->latest()->paginate(10);
+        $questions = Question::select(['id', 'question', 'question_image', 'explanation', 'explanation_image', 'type', 'marks'])->where('exam_id', $exam->id)->get();
 
         return view('teacher.question.index', compact('questions', 'exam'));
     }

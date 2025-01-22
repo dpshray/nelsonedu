@@ -67,6 +67,7 @@
                                     <table class="table text-nowrap table-bordered">
                                         <thead>
                                             <tr>
+                                                <th scope="col">S.N</th>
                                                 <th scope="col">Question</th>
                                                 <th scope="col">Question Image</th>
                                                 <th scope="col">Explanation</th>
@@ -77,8 +78,13 @@
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            @foreach($questions as $question)
+                                            @foreach($questions as $index => $question)
                                             <tr>
+                                                <td scope="row">
+                                                    <div class="d-flex align-items-center">
+                                                        {{ ++$index }}
+                                                    </div>
+                                                </td>
                                                 <td scope="row">
                                                     <div class="d-flex align-items-center">
                                                         {{ substr($question->question , 0,  100) }}...
@@ -138,8 +144,6 @@
                                             @endforeach
                                         </tbody>
                                     </table>
-                                    {{ $questions->links('pagination::bootstrap-5') }}
-
                                 </div>
 
                             </div>
