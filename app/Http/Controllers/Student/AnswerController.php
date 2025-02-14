@@ -31,7 +31,7 @@ class AnswerController extends Controller
             foreach ($questionAnswers as $questionIndex => $answers) {
                 $questionId = explode('_', $questionIndex)[1];
                 $question = Question::find($questionId);
-                $correctOptionsCount = $question->options->pluck('correct_answer')->sum();
+                $correctOptionsCount = $question->options->pluck('correct_answer')->sum() ?: 1;
                 $marksPerCorrectOption = $question->marks / $correctOptionsCount;
 
                 foreach ($answers as $answerId) {
