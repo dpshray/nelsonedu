@@ -35,18 +35,24 @@
 @php
     $url = $lectureVideo->link;
 
-    // Convert YouTube watch or short links to embed links
-    if (str_contains($url, 'youtu.be')) {
-        $url = str_replace('youtu.be/', 'www.youtube.com/embed/', $url);
-    } elseif (str_contains($url, 'watch?v=')) {
-        $url = str_replace('watch?v=', 'embed/', $url);
+    // Extract Vimeo video ID (with optional hash part)
+    $pattern = '/vimeo\.com\/(\d+)(?:\/(\w+))?/';
+    $embedUrl = '';
+
+    if (preg_match($pattern, $url, $matches)) {
+        $videoId = $matches[1];
+        $hash = $matches[2] ?? '';
+        $embedUrl = 'https://player.vimeo.com/video/' . $videoId;
+        if ($hash) {
+            $embedUrl .= '?h=' . $hash;
+        }
     }
 @endphp
 
-<iframe width="560" height="315" src="{{ $url }}" 
-    title="YouTube video player" frameborder="0" 
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+<iframe width="560" height="315" src="{{ $embedUrl }}" 
+    title="Vimeo video player" frameborder="0"
+    allow="autoplay; fullscreen; picture-in-picture"
+    allowfullscreen>
 </iframe>
 
 

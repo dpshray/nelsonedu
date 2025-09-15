@@ -32,7 +32,28 @@
                             <div class="card-body">
                                 <div class="plyr__video-embed" id="player1">
                                     <center>
-                                    {!! $lectureVideo->link !!}
+                                   @php
+    $url = $lectureVideo->link;
+
+    // Extract Vimeo video ID (with optional hash part)
+    $pattern = '/vimeo\.com\/(\d+)(?:\/(\w+))?/';
+    $embedUrl = '';
+
+    if (preg_match($pattern, $url, $matches)) {
+        $videoId = $matches[1];
+        $hash = $matches[2] ?? '';
+        $embedUrl = 'https://player.vimeo.com/video/' . $videoId;
+        if ($hash) {
+            $embedUrl .= '?h=' . $hash;
+        }
+    }
+@endphp
+
+<iframe width="560" height="315" src="{{ $embedUrl }}" 
+    title="Vimeo video player" frameborder="0"
+    allow="autoplay; fullscreen; picture-in-picture"
+    allowfullscreen>
+</iframe>
                                     </center>
                                 </div>
                             </div>

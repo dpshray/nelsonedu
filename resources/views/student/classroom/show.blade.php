@@ -74,34 +74,48 @@
 
                 <div class="mt-5">
                     <h3>Study Materials</h3>
-                    <div class="row row-cols-1 row-cols-md-3 g-4">
-                        @foreach($classroom->lecture_videos as $index => $lecture_video)
-                        <div class="col">
+                  <div class="row row-cols-1 row-cols-md-3 g-4">
+    @foreach($classroom->lecture_videos as $index => $lecture_video)
+    <div class="col">
+        <div class="card h-100">
+            <div class="card-body">
+                <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <h5 class="card-title mb-0">Lecture Video - {{ $index + 1 }}</h5>
+                    <a href="{{ route('student.lecture_video.show', [$lecture_video->id]) }}" class="btn btn-primary btn-sm">View</a>
+                </div>
+            </div>
 
-                            <div class="card">
-                                <div class="card-body" style="display: flex; justify-content: space-between;">
-                                    <h5 class="card-title"> Lecture Video - {{ $index + 1 }}</h5>
-                                    <p></p>
-                                    <a href="{{ route('student.lecture_video.show', [$lecture_video->id]) }}" class="btn btn-primary">View</a>
-
-                                </div>
-                                <div class="card-body">
-                                    <h3>Files</h3>
-                                </div>
-                                @foreach($lecture_video->study_materials as $study_material)
-                                    @php $fileName = $study_material->getFileName($study_material->file)  @endphp
-
-                                    <div class="card-body" style="display: flex; justify-content: space-between;">
-                                        <h5 class="card-title"> {{ $fileName }} : </h5>
-                                        <p></p>
-                                        <a href="{{ route('student.study_material.preview', [$study_material->id, 'fileName' => $fileName]) }}" class="btn btn-primary">View</a>
-
-                                    </div>
-                                @endforeach
-                            </div>
-                        </div>
+            <div class="card-body pt-0">
+                <h6>Files</h6>
+                @if($lecture_video->study_materials->count())
+                <table class="table table-bordered table-sm">
+                    <thead>
+                        <tr>
+                            <th>File Name</th>
+                            <th style="width: 80px;">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach($lecture_video->study_materials as $study_material)
+                        @php $fileName = $study_material->getFileName($study_material->file) @endphp
+                        <tr>
+                            <td>{{ $fileName }}</td>
+                            <td>
+                                <a href="{{ route('student.study_material.preview', [$study_material->id, 'fileName' => $fileName]) }}" class="btn btn-primary btn-sm">View</a>
+                            </td>
+                        </tr>
                         @endforeach
-                    </div>
+                    </tbody>
+                </table>
+                @else
+                <p class="text-muted">No study materials available.</p>
+                @endif
+            </div>
+        </div>
+    </div>
+    @endforeach
+</div>
+
                 </div>
 
             </div>
