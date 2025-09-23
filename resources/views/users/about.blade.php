@@ -187,7 +187,7 @@
     </div>
     </div>
     <div class="info-box">
-    <h4 class="name"><a href="#">Sunita Dhunganals
+    <h4 class="name"><a href="#">Sunita Dhungana
 </a></h4>
     <span class="designation">Program Director</span>
     </div>
