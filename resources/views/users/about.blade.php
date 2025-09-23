@@ -33,7 +33,8 @@
 <div class="sec-title">
 <span class="sub-title">Get to know us</span>
 <h2>Grow your skills learn with us from anywhere</h2>
-<div class="text">Lorem ipsum dolor sit amet consectur adipiscing elit sed eiusmod tempor incididunt labore dolore magna aliquaenim ad minim. Sed risus augue, commodo ornare felis non, eleifend molestie metus pharetra eleifend.</div>
+<div class="text">We are a trusted education consultancy helping students achieve success in NCLEX, study abroad programs, caregiver training, and language proficiency tests. Our expert guidance, proven results, and personalized support ensure that every student is prepared to build a brighter future and succeed globally.
+</div>
 </div>
 <ul class="list-style-one two-column">
 <li><i class="icon fa fa-check"></i> Expert trainers</li>
