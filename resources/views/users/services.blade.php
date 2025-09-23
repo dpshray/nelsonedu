@@ -236,7 +236,7 @@
     <ul class="course-info">
     <li><i class="fa fa-book"></i>1 - 2 Months</li>
     </ul>
-    <h5 class="title"><a href="">Nursing License for Golf Countries</a></h5>
+    <h5 class="title"><a href="">Nursing License for Gulf Countries</a></h5>
     <div class="other-info">
         <ul class="list-style-one one-column">
             <li><i class="icon fa fa-check"></i> Prometric Exam Preparation</li>
