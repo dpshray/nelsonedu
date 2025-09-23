@@ -75,7 +75,7 @@
 </div>
 <div class="auto-container">
 <div class="row">
-<div class="content-column col-lg-6 col-md-12 order-2 wow fadeInRight" data-wow-delay="600ms">
+<div class="order-2 content-column col-lg-6 col-md-12 wow fadeInRight" data-wow-delay="600ms">
 <div class="inner-column">
 <div class="sec-title">
 <span class="sub-title">Get to know us</span>
@@ -200,7 +200,7 @@
 <span class="icon icon-group-1 bounce-y"></span>
 <span class="icon icon-group-2 bounce-y"></span>
 </div>
-<div class="sec-title text-center">
+<div class="text-center sec-title">
 <span class="sub-title">Our Powerful Tools</span>
 <h2>Our Tools that enhance <br>your performance</h2>
 </div>
@@ -269,7 +269,7 @@
 
 <section class="team-section">
 <div class="auto-container">
-<div class="sec-title text-center">
+<div class="text-center sec-title">
 <span class="sub-title">qualified teachers</span>
 <h2>Get to Know Our <br>Dedicated Teaching Professionals</h2>
 </div>
@@ -278,7 +278,7 @@
 <div class="team-block col-xl-3 col-lg-6 col-md-6 col-sm-12 wow fadeInUp">
 <div class="inner-box">
 <div class="image-box">
-<figure class="image"><a href="page-team-details.html"><img src="{{asset('user-assets/images/resource/team-1.jpg')}}" alt></a></figure>
+<figure class="image"><a href="#"><img src="{{asset('user-assets/images/resource/roma.jpg')}}" alt></a></figure>
 <span class="share-icon fa fa-share-alt"></span>
 <div class="social-links">
 <a href="#"><i class="fab fa-twitter"></i></a>
@@ -288,8 +288,8 @@
 </div>
 </div>
 <div class="info-box">
-<h4 class="name"><a href="page-team-details.html">Edward norton</a></h4>
-<span class="designation">Musian</span>
+<h4 class="name"><a href="#">Roma Balami</a></h4>
+<span class="designation">Founder & Executive Director</span>
 </div>
 </div>
 </div>
@@ -297,7 +297,7 @@
 <div class="team-block col-xl-3 col-lg-6 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="400ms">
 <div class="inner-box">
 <div class="image-box">
-<figure class="image"><a href="page-team-details.html"><img src="{{asset('user-assets/images/resource/team-2.jpg')}}" alt></a></figure>
+<figure class="image"><a href="#"><img src="{{asset('user-assets/images/resource/sunita.jpg')}}" alt></a></figure>
 <span class="share-icon fa fa-share-alt"></span>
 <div class="social-links">
 <a href="#"><i class="fab fa-twitter"></i></a>
@@ -307,12 +307,12 @@
 </div>
 </div>
 <div class="info-box">
-<h4 class="name"><a href="page-team-details.html">Jane seymour</a></h4>
-<span class="designation">Designer</span>
+<h4 class="name"><a href="#">Sunita Dahal</a></h4>
+<span class="designation">Program Director</span>
 </div>
 </div>
 </div>
-
+<!--
 <div class="team-block col-xl-3 col-lg-6 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="800ms">
 <div class="inner-box">
 <div class="image-box">
@@ -350,6 +350,7 @@
 </div>
 </div>
 </div>
+-->
 </div>
 </div>
 </section>
@@ -501,7 +502,7 @@
 <div class="bg-image zoom-two" style="background-image: url({{asset('user-assets/images/background/2.jpg')}})"></div>
 <div class="auto-container">
 <div class="content-box">
-<div class="sec-title light text-center">
+<div class="text-center sec-title light">
 <span class="sub-title">Book your seat now</span>
 <h2>Upcoming Classes</h2>
 </div>
@@ -515,7 +516,7 @@
 
 <section class="news-section">
 <div class="auto-container">
-<div class="sec-title text-center">
+<div class="text-center sec-title">
 <span class="sub-title">directly from blog</span>
 <h2>Our latest news &<br> upcoming blog posts</h2>
 </div>

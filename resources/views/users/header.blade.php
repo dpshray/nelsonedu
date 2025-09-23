@@ -11,7 +11,7 @@
    <li class=""><a href="{{url('/about-us')}}">About Us</a></li>
    <li class=""><a href="{{url('/classes')}}">Classes</a></li>
    <li class=""><a href="{{url('/mock-tests')}}">Mock Tests</a></li>
-   <li class=""><a href="{{url('/notice')}}">Notices</a></li>
+   <li class=""><a href="{{url('/services')}}">Services</a></li>
    <li class=""><a href="{{url('/study-abroad')}}">Study Abroad</a></li>
    <li class=""><a href="{{url('/contact-us')}}">Contact Us</a></li>
    </ul>
@@ -23,7 +23,7 @@
    <small>Call Anytime</small><br> +977 01-5911365
    </a>
 @if (Route::has('login'))
-   <nav class="-mx-3 flex flex-1 justify-end">
+   <nav class="flex justify-end flex-1 -mx-3">
        @auth
            @php
                // Determine the dashboard URL based on user roles using Spatie's hasRole method
@@ -80,7 +80,7 @@
    <div class="nav-logo"><a href="{{url('/')}}"><img src="{{asset('user-assets/images/logo-2.png')}}" alt title></a></div>
    <div class="close-btn"><i class="icon fa fa-times"></i></div>
    </div>
-   <ul class="navigation clearfix">
+   <ul class="clearfix navigation">
    
    </ul>
    <ul class="contact-list-one">
@@ -143,8 +143,8 @@
    <div class="nav-outer">
    
    <nav class="main-menu">
-   <div class="navbar-collapse show collapse clearfix">
-   <ul class="navigation clearfix">
+   <div class="clearfix navbar-collapse show collapse">
+   <ul class="clearfix navigation">
    
    </ul>
    </div>

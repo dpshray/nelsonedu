@@ -84,6 +84,17 @@ class HomeController extends Controller
         return view('users.shownotice', compact('news'));
     }
 
+    public function services()
+    {
+
+        return view('users.services');
+    }
+
+    public function gallery()
+    {
+        return view('users.gallery');
+    }
+
     public function noticedetails($id)
     {
         $detail = News::find($id);

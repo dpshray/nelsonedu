@@ -27,7 +27,7 @@
     <div class="footer-widget">
     <h4 class="widget-title">Links</h4>
     <ul class="user-links">
-    <li><a href="{{url('about-us')}}">About</a></li>
+    <li><a href="{{url('gallery')}}">Gallery</a></li>
     <li><a href="{{url('classes')}}">Courses</a></li>
     <li><a href="{{url('mock-tests')}}">Mock Tests</a></li>
 

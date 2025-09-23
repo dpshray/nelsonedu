@@ -28,7 +28,7 @@
 </div>
 <div class="auto-container">
 <div class="row">
-<div class="content-column col-lg-6 col-md-12 order-2 wow fadeInRight" data-wow-delay="600ms">
+<div class="order-2 content-column col-lg-6 col-md-12 wow fadeInRight" data-wow-delay="600ms">
 <div class="inner-column">
 <div class="sec-title">
 <span class="sub-title">Get to know us</span>
@@ -148,91 +148,92 @@
 
 
 <section class="team-section">
-<div class="auto-container">
-<div class="sec-title text-center">
-<span class="sub-title">qualified teachers</span>
-<h2>Meet the teacher who <br>teaches you online</h2>
-</div>
-<div class="row">
-
-<div class="team-block col-xl-3 col-lg-6 col-md-6 col-sm-12 wow fadeInUp">
-<div class="inner-box">
-<div class="image-box">
-<figure class="image"><a href="page-team-details.html"><img src="{{asset('user-assets/images/resource/team-1.jpg')}}" alt></a></figure>
-<span class="share-icon fa fa-share-alt"></span>
-<div class="social-links">
-<a href="#"><i class="fab fa-twitter"></i></a>
-<a href="#"><i class="fab fa-facebook-f"></i></a>
-<a href="#"><i class="fab fa-pinterest-p"></i></a>
-<a href="#"><i class="fab fa-instagram"></i></a>
-</div>
-</div>
-<div class="info-box">
-<h4 class="name"><a href="page-team-details.html">Edward norton</a></h4>
-<span class="designation">Musian</span>
-</div>
-</div>
-</div>
-
-<div class="team-block col-xl-3 col-lg-6 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="400ms">
-<div class="inner-box">
-<div class="image-box">
-<figure class="image"><a href="page-team-details.html"><img src="{{asset('user-assets/images/resource/team-2.jpg')}}" alt></a></figure>
-<span class="share-icon fa fa-share-alt"></span>
-<div class="social-links">
-<a href="#"><i class="fab fa-twitter"></i></a>
-<a href="#"><i class="fab fa-facebook-f"></i></a>
-<a href="#"><i class="fab fa-pinterest-p"></i></a>
-<a href="#"><i class="fab fa-instagram"></i></a>
-</div>
-</div>
-<div class="info-box">
-<h4 class="name"><a href="page-team-details.html">Jane seymour</a></h4>
-<span class="designation">Designer</span>
-</div>
-</div>
-</div>
-
-<div class="team-block col-xl-3 col-lg-6 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="800ms">
-<div class="inner-box">
-<div class="image-box">
-<figure class="image"><a href="page-team-details.html"><img src="{{asset('user-assets/images/resource/team-3.jpg')}}" alt></a></figure>
-<span class="share-icon fa fa-share-alt"></span>
-<div class="social-links">
-<a href="#"><i class="fab fa-twitter"></i></a>
-<a href="#"><i class="fab fa-facebook-f"></i></a>
-<a href="#"><i class="fab fa-pinterest-p"></i></a>
-<a href="#"><i class="fab fa-instagram"></i></a>
-</div>
-</div>
-<div class="info-box">
-<h4 class="name"><a href="page-team-details.html">Mike hardson</a></h4>
-<span class="designation">Developer</span>
-</div>
-</div>
-</div>
-
-<div class="team-block col-xl-3 col-lg-6 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="1200ms">
-<div class="inner-box">
-<div class="image-box">
-<figure class="image"><a href="page-team-details.html"><img src="{{asset('user-assets/images/resource/team-4.jpg')}}" alt></a></figure>
-<span class="share-icon fa fa-share-alt"></span>
-<div class="social-links">
-<a href="#"><i class="fab fa-twitter"></i></a>
-<a href="#"><i class="fab fa-facebook-f"></i></a>
-<a href="#"><i class="fab fa-pinterest-p"></i></a>
-<a href="#"><i class="fab fa-instagram"></i></a>
-</div>
-</div>
-<div class="info-box">
-<h4 class="name"><a href="page-team-details.html">Christine eve</a></h4>
-<span class="designation">Artisit</span>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
+    <div class="auto-container">
+    <div class="text-center sec-title">
+    <span class="sub-title">qualified teachers</span>
+    <h2>Get to Know Our <br>Dedicated Teaching Professionals</h2>
+    </div>
+    <div class="row">
+    
+    <div class="team-block col-xl-3 col-lg-6 col-md-6 col-sm-12 wow fadeInUp">
+    <div class="inner-box">
+    <div class="image-box">
+    <figure class="image"><a href="#"><img src="{{asset('user-assets/images/resource/roma.jpg')}}" alt></a></figure>
+    <span class="share-icon fa fa-share-alt"></span>
+    <div class="social-links">
+    <a href="#"><i class="fab fa-twitter"></i></a>
+    <a href="#"><i class="fab fa-facebook-f"></i></a>
+    <a href="#"><i class="fab fa-pinterest-p"></i></a>
+    <a href="#"><i class="fab fa-instagram"></i></a>
+    </div>
+    </div>
+    <div class="info-box">
+    <h4 class="name"><a href="#">Roma Balami</a></h4>
+    <span class="designation">Founder & Executive Director</span>
+    </div>
+    </div>
+    </div>
+    
+    <div class="team-block col-xl-3 col-lg-6 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="400ms">
+    <div class="inner-box">
+    <div class="image-box">
+    <figure class="image"><a href="#"><img src="{{asset('user-assets/images/resource/sunita.jpg')}}" alt></a></figure>
+    <span class="share-icon fa fa-share-alt"></span>
+    <div class="social-links">
+    <a href="#"><i class="fab fa-twitter"></i></a>
+    <a href="#"><i class="fab fa-facebook-f"></i></a>
+    <a href="#"><i class="fab fa-pinterest-p"></i></a>
+    <a href="#"><i class="fab fa-instagram"></i></a>
+    </div>
+    </div>
+    <div class="info-box">
+    <h4 class="name"><a href="#">Sunita Dahal</a></h4>
+    <span class="designation">Program Director</span>
+    </div>
+    </div>
+    </div>
+    <!--
+    <div class="team-block col-xl-3 col-lg-6 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="800ms">
+    <div class="inner-box">
+    <div class="image-box">
+    <figure class="image"><a href="page-team-details.html"><img src="{{asset('user-assets/images/resource/team-3.jpg')}}" alt></a></figure>
+    <span class="share-icon fa fa-share-alt"></span>
+    <div class="social-links">
+    <a href="#"><i class="fab fa-twitter"></i></a>
+    <a href="#"><i class="fab fa-facebook-f"></i></a>
+    <a href="#"><i class="fab fa-pinterest-p"></i></a>
+    <a href="#"><i class="fab fa-instagram"></i></a>
+    </div>
+    </div>
+    <div class="info-box">
+    <h4 class="name"><a href="page-team-details.html">Mike hardson</a></h4>
+    <span class="designation">Developer</span>
+    </div>
+    </div>
+    </div>
+    
+    <div class="team-block col-xl-3 col-lg-6 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="1200ms">
+    <div class="inner-box">
+    <div class="image-box">
+    <figure class="image"><a href="page-team-details.html"><img src="{{asset('user-assets/images/resource/team-4.jpg')}}" alt></a></figure>
+    <span class="share-icon fa fa-share-alt"></span>
+    <div class="social-links">
+    <a href="#"><i class="fab fa-twitter"></i></a>
+    <a href="#"><i class="fab fa-facebook-f"></i></a>
+    <a href="#"><i class="fab fa-pinterest-p"></i></a>
+    <a href="#"><i class="fab fa-instagram"></i></a>
+    </div>
+    </div>
+    <div class="info-box">
+    <h4 class="name"><a href="page-team-details.html">Christine eve</a></h4>
+    <span class="designation">Artisit</span>
+    </div>
+    </div>
+    </div>
+    -->
+    </div>
+    </div>
+    </section>
 
 
 @include('users.footer')

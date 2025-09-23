@@ -41,6 +41,8 @@ Route::get('mock-tests', [HomeController::class, 'mocktest']);
 Route::get('mock-test/details/{id}', [HomeController::class, 'mocktestdetails']);
 Route::get('contact-us', [HomeController::class, 'contact']);
 Route::get('notice', [HomeController::class, 'notice']);
+Route::get('services', [HomeController::class, 'services']);
+Route::get('gallery', [HomeController::class, 'gallery']);
 Route::get('notice/details/{id}', [HomeController::class, 'noticedetails']);
 Route::get('study-abroad', [HomeController::class, 'studyabroad']);
 Route::get('abroad/details/{id}', [HomeController::class, 'abroaddetails']);
