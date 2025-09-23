@@ -9,6 +9,14 @@
     <div class="footer-widget about-widget">
     <div class="logo"><a href="{{url('/')}}"><img src="{{asset('user-assets/images/logo-2.png')}}" alt></a></div>
     <div class="text">Get Access to our Courses for Online and Physical Classes.</div>
+    <li>
+        <a href="https://www.facebook.com/NelsonEduNepal" target="_blank" style="color: white; text-decoration: none;">
+          <i class="fab fa-facebook fa-lg"></i> Follow us on Facebook
+        </a>
+      </li>
+      
+      
+
     </div>
     </div>
     
