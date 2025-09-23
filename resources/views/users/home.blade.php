@@ -405,13 +405,13 @@
 <div class="testimonial-block">
 <div class="inner-box">
 <div class="content-box">
-<figure class="thumb"><img src="{{asset('user-assets/images/resource/testi-thumb-1.jpg')}}" alt></figure>
+<figure class="thumb"><img src="{{asset('user-assets/images/resource/sujata.jpg')}}" alt></figure>
 <div class="rating"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div>
-<div class="text">Lorem ipsum is simply free text dolor sit amet, consectetur adipisicing elit, sed do incididunt ut labore et dolore magna aliqua.</div>
+<div class="text">I was very nervous about preparing for NCLEX, but the classes here completely changed my confidence level. The mock tests and guidance from experienced mentors helped me clear NCLEX in my very first attempt. I am now ready to start my nursing career in the USA.</div>
 <div class="info-box">
 <span class="icon-quote"></span>
-<h4 class="name">Jame sickres</h4>
-<span class="designation">Market Manager</span>
+<h4 class="name">Sujata Sharma</h4>
+<span class="designation">Nursing Graduate (NCLEX-USA Passer)</span>
 </div>
 </div>
 </div>
@@ -420,13 +420,13 @@
 <div class="testimonial-block">
 <div class="inner-box">
 <div class="content-box">
-<figure class="thumb"><img src="{{asset('user-assets/images/resource/testi-thumb-2.jpg')}}" alt></figure>
+<figure class="thumb"><img src="{{asset('user-assets/images/resource/ramesh.jpg')}}" alt></figure>
 <div class="rating"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div>
-<div class="text">Lorem ipsum is simply free text dolor sit amet, consectetur adipisicing elit, sed do incididunt ut labore et dolore magna aliqua.</div>
+<div class="text">I always dreamt of studying in the United States but was confused about the visa process. The consultancy team guided me step by step, from documentation to interview preparation. Today, I proudly hold my US visa and am pursuing my studies abroad.</div>
 <div class="info-box">
 <span class="icon-quote"></span>
-<h4 class="name">Aleesha brown</h4>
-<span class="designation">Market Manager</span>
+<h4 class="name">Ramesh Adhikari</h4>
+<span class="designation">Student (US Study Visa)</span>
 </div>
 </div>
 </div>
@@ -435,13 +435,13 @@
 <div class="testimonial-block">
 <div class="inner-box">
 <div class="content-box">
-<figure class="thumb"><img src="{{asset('user-assets/images/resource/testi-thumb-1.jpg')}}" alt></figure>
+<figure class="thumb"><img src="{{asset('user-assets/images/resource/mina.jpg')}}" alt></figure>
 <div class="rating"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div>
-<div class="text">Lorem ipsum is simply free text dolor sit amet, consectetur adipisicing elit, sed do incididunt ut labore et dolore magna aliqua.</div>
+<div class="text">Joining the caregiver training program here was the best decision for my career. The classes were practical, interactive, and designed to match international standards. I now feel fully prepared to work as a professional caregiver abroad.</div>
 <div class="info-box">
 <span class="icon-quote"></span>
-<h4 class="name">Jame sickres</h4>
-<span class="designation">Market Manager</span>
+<h4 class="name">Mina Karki</h4>
+<span class="designation">Caregiver Trainee</span>
 </div>
 </div>
 </div>
@@ -450,13 +450,13 @@
 <div class="testimonial-block">
 <div class="inner-box">
 <div class="content-box">
-<figure class="thumb"><img src="{{asset('user-assets/images/resource/testi-thumb-2.jpg')}}" alt></figure>
+<figure class="thumb"><img src="{{asset('user-assets/images/resource/santosh.jpg')}}" alt></figure>
 <div class="rating"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div>
-<div class="text">Lorem ipsum is simply free text dolor sit amet, consectetur adipisicing elit, sed do incididunt ut labore et dolore magna aliqua.</div>
+<div class="text">I had struggled with IELTS before, but the personalized classes and tips I received here made a huge difference. My confidence in speaking and writing improved a lot, and I achieved my desired band score for my visa application.</div>
 <div class="info-box">
 <span class="icon-quote"></span>
-<h4 class="name">Aleesha brown</h4>
-<span class="designation">Market Manager</span>
+<h4 class="name">Santosh Yadav</h4>
+<span class="designation">IELTS Student</span>
 </div>
 </div>
 </div>
@@ -465,13 +465,13 @@
 <div class="testimonial-block">
 <div class="inner-box">
 <div class="content-box">
-<figure class="thumb"><img src="{{asset('user-assets/images/resource/testi-thumb-1.jpg')}}" alt></figure>
+<figure class="thumb"><img src="{{asset('user-assets/images/resource/anjana.jpg')}}" alt></figure>
 <div class="rating"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div>
-<div class="text">Lorem ipsum is simply free text dolor sit amet, consectetur adipisicing elit, sed do incididunt ut labore et dolore magna aliqua.</div>
+<div class="text">The NCLEX preparation classes are very systematic and well-structured. From study materials to one-on-one mentoring, everything was perfectly designed. I am grateful for their support, which helped me achieve success in my NCLEX journey.</div>
 <div class="info-box">
 <span class="icon-quote"></span>
-<h4 class="name">Jame sickres</h4>
-<span class="designation">Market Manager</span>
+<h4 class="name">Anjana Thapa</h4>
+<span class="designation">Nursing Graduate (NCLEX Passer)</span>
 </div>
 </div>
 </div>
@@ -480,13 +480,13 @@
 <div class="testimonial-block">
 <div class="inner-box">
 <div class="content-box">
-<figure class="thumb"><img src="{{asset('user-assets/images/resource/testi-thumb-2.jpg')}}" alt></figure>
+<figure class="thumb"><img src="{{asset('user-assets/images/resource/prakash.jpg')}}" alt></figure>
 <div class="rating"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div>
-<div class="text">Lorem ipsum is simply free text dolor sit amet, consectetur adipisicing elit, sed do incididunt ut labore et dolore magna aliqua.</div>
+<div class="text">I chose PTE because of its flexibility, and this consultancy provided me with excellent training. The practice sessions and mock tests were exactly like the real exam. I was able to achieve my required score and proceed with my study abroad plan.</div>
 <div class="info-box">
 <span class="icon-quote"></span>
-<h4 class="name">Aleesha brown</h4>
-<span class="designation">Market Manager</span>
+<h4 class="name">Prakash Chaudhary</h4>
+<span class="designation">PTE Candidate</span>
 </div>
 </div>
 </div>
@@ -499,19 +499,105 @@
 </section>
 
 <section class="countdown-section">
-<div class="bg-image zoom-two" style="background-image: url({{asset('user-assets/images/background/2.jpg')}})"></div>
-<div class="auto-container">
-<div class="content-box">
-<div class="text-center sec-title light">
-<span class="sub-title">Book your seat now</span>
-<h2>Upcoming Classes</h2>
-</div>
-<div class="time-counter wow fadeInUp">
-<div class="time-countdown" data-countdown="2/2/2023"></div>
-</div>
-</div>
-</div>
+    <div class="bg-image zoom-two" style="background-image: url({{asset('user-assets/images/background/2.jpg')}})"></div>
+    <div class="auto-container">
+        <div class="content-box">
+            
+            <!-- Section Title -->
+            <div class="text-center sec-title light">
+                <span class="sub-title">Book your seat now</span>
+                <h2>Our Achievements</h2>
+            </div>
+
+            <!-- Stats Counter (Always Horizontal) -->
+            <div class="flex items-center justify-between mt-12 text-center text-white stats-counter">
+                <div class="stat-box">
+                    <h2 class="mb-2 text-5xl font-bold counter" data-target="1000">0</h2>
+                    <p class="text-lg">NCLEX Passers</p>
+                </div>
+                <div class="stat-box">
+                    <h2 class="mb-2 text-5xl font-bold counter" data-target="500">0</h2>
+                    <p class="text-lg">US Visas</p>
+                </div>
+                <div class="stat-box">
+                    <h2 class="mb-2 text-5xl font-bold counter" data-target="40">0</h2>
+                    <p class="text-lg">Ongoing Processing</p>
+                </div>
+                <div class="stat-box">
+                    <h2 class="mb-2 text-5xl font-bold counter" data-target="15">0</h2>
+                    <p class="text-lg">Years of Experience</p>
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
+
+<!-- CSS -->
+<style>
+    .stats-counter {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 40px;
+        flex-wrap: nowrap; /* ❌ no wrapping */
+    }
+    .stats-counter .stat-box {
+        flex: 1; /* all boxes equal width */
+        background: rgba(255, 255, 255, 0.1);
+        padding: 25px;
+        border-radius: 15px;
+        transition: 0.3s;
+    }
+    .stats-counter .stat-box:hover {
+        background: rgba(255, 255, 255, 0.2);
+        transform: translateY(-5px);
+    }
+    .stats-counter h2 {
+        color: #fff;
+    }
+    .stats-counter p {
+        color: #ddd;
+        margin: 0;
+    }
+</style>
+
+<!-- JS for animated counter -->
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const counters = document.querySelectorAll('.counter');
+        const speed = 200;
+
+        const animateCounters = () => {
+            counters.forEach(counter => {
+                const updateCount = () => {
+                    const target = +counter.getAttribute('data-target');
+                    const count = +counter.innerText;
+                    const increment = Math.ceil(target / speed);
+
+                    if (count < target) {
+                        counter.innerText = count + increment;
+                        setTimeout(updateCount, 20);
+                    } else {
+                        counter.innerText = target + "+";
+                    }
+                };
+                updateCount();
+            });
+        };
+
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateCounters();
+                    observer.disconnect();
+                }
+            });
+        }, { threshold: 0.5 });
+
+        observer.observe(document.querySelector('.stats-counter'));
+    });
+</script>
+
 
 
 <section class="news-section">
