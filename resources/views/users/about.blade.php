@@ -39,7 +39,7 @@
 <ul class="list-style-one two-column">
 <li><i class="icon fa fa-check"></i> Expert trainers</li>
 <li><i class="icon fa fa-check"></i> Online learning</li>
-<li><i class="icon fa fa-check"></i> Lifetime access</li>
+<li><i class="icon fa fa-check"></i> Unlimited access</li>
 <li><i class="icon fa fa-check"></i> Great results</li>
 </ul>
 <div class="btn-box">
