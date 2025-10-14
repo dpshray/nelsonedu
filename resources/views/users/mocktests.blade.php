@@ -25,29 +25,69 @@
 <section class>
 <div class="container pb-100">
 <div class="row">
-    @foreach($exam as $exam)
     <div class="course-block-two col-lg-4 col-md-6 col-sm-12">
     <div class="inner-box">
     <div class="image-box">
-    <figure class="image"><a href="{{url('mock-test/details/')}}/{{$exam->id}}"><img src="{{ asset('storage/' . $exam->image) }}" alt></a></figure>
-    <!--
-    <span class="price">{{$exam->price}}</span>
-    -->
-    <div class="value">{{$exam->target}}</div>
-    </div>
-    <div class="content-box">
-    <ul class="course-info">
-    </ul>
-    <h5 class="title"><a href="{{url('mock-test/details/')}}/{{$exam->id}}">{{$exam->title}}</a></h5>
-    <div class="other-info">
-    <div class="rating-box">
-        <span class="text">{{ Str::limit($exam->description, 30, '...') }}</span>
+    <figure class="image"><a href="https://nelson.dworklabs.com/login"><img src="{{asset('user-assets/images/resource/nclex-mock-test.jpg')}}" alt></a></figure>
     </div>
     </div>
     </div>
-    </div>
-    </div>
-    @endforeach
+
+    <div class="course-block-two col-lg-4 col-md-6 col-sm-12">
+        <div class="inner-box">
+        <div class="image-box">
+        <figure class="image"><a href="https://nelson.dworklabs.com/login"><img src="{{asset('user-assets/images/resource/nnc-mock-test.jpg')}}" alt></a></figure>
+        </div>
+        </div>
+        </div>
+
+        <div class="course-block-two col-lg-4 col-md-6 col-sm-12">
+            <div class="inner-box">
+            <div class="image-box">
+            <figure class="image"><a href="https://nelson.dworklabs.com/login"><img src="{{asset('user-assets/images/resource/bns-mock-test.jpg')}}" alt></a></figure>
+            </div>
+            </div>
+            </div>
+
+            <div class="course-block-two col-lg-4 col-md-6 col-sm-12">
+                <div class="inner-box">
+                <div class="image-box">
+                <figure class="image"><a href="https://nelson.dworklabs.com/login"><img src="{{asset('user-assets/images/resource/mn-mock-test.jpg')}}" alt></a></figure>
+                </div>
+                </div>
+                </div>
+
+                <div class="course-block-two col-lg-4 col-md-6 col-sm-12">
+                    <div class="inner-box">
+                    <div class="image-box">
+                    <figure class="image"><a href="https://nelson.dworklabs.com/login"><img src="{{asset('user-assets/images/resource/prometric-mock-test.jpg')}}" alt></a></figure>
+                    </div>
+                    </div>
+                    </div>
+
+                    <div class="course-block-two col-lg-4 col-md-6 col-sm-12">
+                        <div class="inner-box">
+                        <div class="image-box">
+                        <figure class="image"><a href="https://nelson.dworklabs.com/login"><img src="{{asset('user-assets/images/resource/ielts-mock-test.jpg')}}" alt></a></figure>
+                        </div>
+                        </div>
+                        </div>
+
+                        <div class="course-block-two col-lg-4 col-md-6 col-sm-12">
+                            <div class="inner-box">
+                            <div class="image-box">
+                            <figure class="image"><a href="https://nelson.dworklabs.com/login"><img src="{{asset('user-assets/images/resource/pte-mock-test.jpg')}}" alt></a></figure>
+                            </div>
+                            </div>
+                            </div>
+
+                            <div class="course-block-two col-lg-4 col-md-6 col-sm-12">
+                                <div class="inner-box">
+                                <div class="image-box">
+                                <figure class="image"><a href="https://nelson.dworklabs.com/login"><img src="{{asset('user-assets/images/resource/oet-mock-test.jpg')}}" alt></a></figure>
+                                </div>
+                                </div>
+                                </div>
 
 </div>
 </div>

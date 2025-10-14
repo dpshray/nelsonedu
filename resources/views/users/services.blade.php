@@ -207,7 +207,7 @@
 </div>
 <div class="content-box">
 <ul class="course-info">
-<li><i class="fa fa-book"></i>1 - 4 Months</li>
+<li><i class="fa fa-book"></i>2 - 4 Months</li>
 </ul>
 <h5 class="title"><a href="">NCLEX - RN</a></h5>
 <div class="other-info">
@@ -271,7 +271,7 @@
 <div class="other-info">
 <ul class="list-style-one one-column">
     <li><i class="icon fa fa-check"></i> Certification</li>
-    <li><i class="icon fa fa-check"></i> Practical Placement for atleast 1 month</li>
+    <li><i class="icon fa fa-check"></i> Practical Placement Support</li>
     <li><i class="icon fa fa-check"></i> Small Group Based</li>
     <li><i class="icon fa fa-check"></i> Experienced Faculty Members</li>
     </ul>
@@ -298,7 +298,7 @@
     <ul class="list-style-one one-column">
         <li><i class="icon fa fa-check"></i> Certification</li>
         <li><i class="icon fa fa-check"></i> Interviews & Job Placement Guidance</li>
-        <li><i class="icon fa fa-check"></i> Language Support for Japan, UK, Australia, Canada, Isarael & Europe</li>
+        <li><i class="icon fa fa-check"></i> Language Support for Japan, UK, Australia, Canada, Israel & Europe</li>
 
         </ul>
 
@@ -324,10 +324,10 @@
         <ul class="list-style-one one-column">
             <li><i class="icon fa fa-check"></i> Gender Empowerment & GBV awareness Training</li>
             <li><i class="icon fa fa-check"></i> Research, Learning, Monitoring & Evaluation</li>
-            <li><i class="icon fa fa-check"></i> Training for Teachers</li>
+            <li><i class="icon fa fa-check"></i> First-Aid Training</li>
             <li><i class="icon fa fa-check"></i> Training for Healthcare Supervisors</li>
             <li><i class="icon fa fa-check"></i> Psychological Counsellors</li>
-            <li><i class="icon fa fa-check"></i> Training for Career Counsellors</li>
+            <li><i class="icon fa fa-check"></i> BLS/ACLS Training</li>
             </ul>
     
     </div>

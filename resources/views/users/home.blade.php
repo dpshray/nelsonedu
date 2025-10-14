@@ -103,7 +103,7 @@
 <div class="inner-column wow fadeInLeft">
 <figure class="image-1 overlay-anim wow fadeInUp"><img src="{{asset('user-assets/images/resource/about-1.png')}}" alt></figure>
 <figure class="image-2 overlay-anim wow fadeInRight"><img src="{{asset('user-assets/images/resource/about-2.jpg')}}" alt></figure>
-<div class="experience bounce-y"><span class="count">15</span> Years of Experience</div>
+<!--<div class="experience bounce-y"><span class="count">100+</span> Proven Results</div>-->
 </div>
 </div>
 </div>
@@ -186,7 +186,7 @@
 <div class="feature-block col-lg-3 col-md-6 col-sm-6 wow fadeInUp" data-wow-delay="1200ms">
 <div class="inner-box ">
 <i class="icon flaticon-users"></i>
-<h5 class="title">Experienced <br>Members</h5>
+<h5 class="title">15 Years<br>of Experience</h5>
 </div>
 </div>
 </div>
@@ -271,7 +271,7 @@
 <div class="auto-container">
 <div class="text-center sec-title">
 <span class="sub-title">qualified teachers</span>
-<h2>Get to Know Our <br>Dedicated Teaching Professionals</h2>
+<h2>Get to Know Our <br>Core Team Members</h2>
 </div>
 <div class="row">
 

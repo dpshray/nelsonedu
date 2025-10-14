@@ -43,7 +43,7 @@
 <li><i class="icon fa fa-check"></i> Great results</li>
 </ul>
 <div class="btn-box">
-<a href="page-about.html" class="theme-btn btn-style-one"><span class="btn-title">Discover more</span></a>
+<a href="#" class="theme-btn btn-style-one"><span class="btn-title">Discover more</span></a>
 </div>
 </div>
 </div>
@@ -57,7 +57,6 @@
 <div class="inner-column wow fadeInLeft">
 <figure class="image-1 overlay-anim wow fadeInUp"><img src="{{asset('user-assets/images/resource/about-1.png')}}" alt></figure>
 <figure class="image-2 overlay-anim wow fadeInRight"><img src="{{asset('user-assets/images/resource/about-2.jpg')}}" alt></figure>
-<div class="experience bounce-y"><span class="count">15</span> Years of Experience</div>
 </div>
 </div>
 </div>
