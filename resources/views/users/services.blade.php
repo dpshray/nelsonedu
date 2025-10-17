@@ -306,6 +306,11 @@
 </div>
 </div>
 </div>
+</div>
+<div class="mb-3 sec-title">
+    <h3>Other Programs</h3>
+    </div>
+<div class="row">
 <div class="course-block-two col-lg-4 col-md-6 col-sm-12">
     <div class="inner-box">
     <div class="image-box">

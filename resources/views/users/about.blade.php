@@ -43,7 +43,7 @@
 <li><i class="icon fa fa-check"></i> Great results</li>
 </ul>
 <div class="btn-box">
-<a href="#" class="theme-btn btn-style-one"><span class="btn-title">Discover more</span></a>
+<a href="{{ url('/about-us') }}" class="theme-btn btn-style-one"><span class="btn-title">Discover more</span></a>
 </div>
 </div>
 </div>

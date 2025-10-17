@@ -89,7 +89,7 @@
 <li><i class="icon fa fa-check"></i> Great results</li>
 </ul>
 <div class="btn-box">
-<a href="{{url('about')}}" class="theme-btn btn-style-one"><span class="btn-title">Discover more</span></a>
+<a href="{{url('about-us')}}" class="theme-btn btn-style-one"><span class="btn-title">Discover more</span></a>
 </div>
 </div>
 </div>
@@ -516,11 +516,11 @@
                     <p class="text-lg">NCLEX Passers</p>
                 </div>
                 <div class="stat-box">
-                    <h2 class="mb-2 text-5xl font-bold counter" data-target="500">0</h2>
+                    <h2 class="mb-2 text-5xl font-bold counter" data-target="40">0</h2>
                     <p class="text-lg">US Visas</p>
                 </div>
                 <div class="stat-box">
-                    <h2 class="mb-2 text-5xl font-bold counter" data-target="40">0</h2>
+                    <h2 class="mb-2 text-5xl font-bold counter" data-target="500">0</h2>
                     <p class="text-lg">Ongoing Processing</p>
                 </div>
                 <div class="stat-box">
