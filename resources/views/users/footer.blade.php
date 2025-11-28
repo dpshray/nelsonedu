@@ -11,7 +11,11 @@
     <div class="text">Get Access to our Courses for Online and Physical Classes.</div>
     <li>
         <a href="https://www.facebook.com/NelsonEduNepal" target="_blank" style="color: white; text-decoration: none;">
-          <i class="fab fa-facebook fa-lg"></i> Follow us on Facebook
+          <i class="fab fa-facebook fa-lg"></i> 
+        </a>
+<a href="https://www.tiktok.com/@nelsoneduconsultants" target="_blank" style="color: white; text-decoration: none;">
+    <i class="fa-brands fa-tiktok fa-lg"></i>
+</a>
         </a>
       </li>
       
@@ -98,3 +102,4 @@
     <script src="{{asset('user-assets/js/swiper.min.js')}}"></script>
     <script src="{{asset('user-assets/js/owl.js')}}"></script>
     <script src="{{asset('user-assets/js/script.js')}}"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">

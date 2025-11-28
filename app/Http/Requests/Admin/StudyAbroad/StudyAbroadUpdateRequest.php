@@ -23,7 +23,7 @@ class StudyAbroadUpdateRequest extends FormRequest
     {
         return [
             'country' => ['required', 'string', 'max:255'],
-            'description' => ['required', 'string', 'max:2550'],
+            'description' => ['required', 'string', 'max:25500000'],
             'image' => ['sometimes', 'nullable', 'image', 'mimes:jpeg,png,jpg,gif,svg', 'max:2048'],
         ];
     }

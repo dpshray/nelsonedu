@@ -193,6 +193,44 @@
     </div>
     </div>
     </div>
+
+    <div class="team-block col-xl-3 col-lg-6 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="400ms">
+<div class="inner-box">
+<div class="image-box">
+<figure class="image"><a href="#"><img src="{{asset('user-assets/images/resource/tara.jpg')}}" alt></a></figure>
+<span class="share-icon fa fa-share-alt"></span>
+<div class="social-links">
+<a href="#"><i class="fab fa-twitter"></i></a>
+<a href="#"><i class="fab fa-facebook-f"></i></a>
+<a href="#"><i class="fab fa-pinterest-p"></i></a>
+<a href="#"><i class="fab fa-instagram"></i></a>
+</div>
+</div>
+<div class="info-box">
+<h4 class="name"><a href="#">Tara Kr. Karn</a></h4>
+<span class="designation">Trainer</span>
+</div>
+</div>
+</div>
+
+<div class="team-block col-xl-3 col-lg-6 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="400ms">
+<div class="inner-box">
+<div class="image-box">
+<figure class="image"><a href="#"><img src="{{asset('user-assets/images/resource/bijaya.jpg')}}" alt></a></figure>
+<span class="share-icon fa fa-share-alt"></span>
+<div class="social-links">
+<a href="#"><i class="fab fa-twitter"></i></a>
+<a href="#"><i class="fab fa-facebook-f"></i></a>
+<a href="#"><i class="fab fa-pinterest-p"></i></a>
+<a href="#"><i class="fab fa-instagram"></i></a>
+</div>
+</div>
+<div class="info-box">
+<h4 class="name"><a href="#">Bijaya Manandhar</a></h4>
+<span class="designation">Caregiver Trainer</span>
+</div>
+</div>
+</div>
     <!--
     <div class="team-block col-xl-3 col-lg-6 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="800ms">
     <div class="inner-box">

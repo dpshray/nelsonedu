@@ -23,7 +23,7 @@ class StudyAbroadStoreRequest extends FormRequest
     {
         return [
             'country' => ['required', 'string', 'max:255'],
-            'description' => ['required', 'string', 'max:255000'],
+            'description' => ['required', 'string', 'max:25500000'],
             'image' => ['required', 'image', 'mimes:jpeg,png,jpg,gif,svg', 'max:5120'],
         ];
     }
